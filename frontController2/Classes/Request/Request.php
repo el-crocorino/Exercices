@@ -14,7 +14,7 @@
 		protected $mUri = '';
 		protected $mParams = [];
 
-		public function __construct( $pUri, $pParams)
+		public function __construct( $pUri, array $pParams = [])
 		{
 			$this->mUri = $pUri;
 			$this->mParams = $pParams;
