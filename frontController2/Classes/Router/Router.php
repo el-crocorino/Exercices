@@ -7,10 +7,10 @@
 	 */
 
 	namespace Classes\Router;
-	use Classes\Route\RouteInterface;
+
 	use Classes\Route\Route;
-	use Classes\Request\RequestInterface;
-	use Classes\Response\ResponseInterface;
+	use Classes\Request\Request;
+	use Classes\Response\Response;
 
 	class Router
 	{
@@ -21,7 +21,7 @@
 			$this->addRoutes( $pRoutes);
 		}
 
-		public function addRoute( RouteInterface $pRoute ) : Router
+		public function addRoute( Route $pRoute ) : Router
 		{
 			$this->mRoutes[] = $pRoute;
 			return $this;
@@ -40,7 +40,7 @@
 			return $this->mRoutes;
 		}
 
-		public function route( RequestInterface $pRequest, ResponseInterface $pResponse ) : Route
+		public function route( Request $pRequest, Response $pResponse ) : Route
 		{
 
 			foreach( $this->mRoutes as $lRoute ) {

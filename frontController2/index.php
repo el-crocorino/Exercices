@@ -7,8 +7,11 @@
 	use Classes\Route\Route;
 	use Classes\Router\Router;
 
-	$lRequest = new Request( 'http://example.com/test/');
-	$lResponse = new Response();
+	require_once 'vendor/autoload.php';
+
+	$lRequest = new Request( 'http://example.com/error/');
+	//$lRequest = new Request( 'http://example.com/test/');
+	$lResponse = new Response( 'TestVersion');
 
 	$lRoute1 = new Route( 'http://example.com/test/', 'Classes\Controller\TestController');
 	$lRoute2 = new Route( 'http://example.com/error/', 'Classes\Controller\ErrorController');

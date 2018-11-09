@@ -9,8 +9,8 @@
 	namespace Classes\FrontController;
 	use Classes\Router\Router;
 	use Classes\Dispatcher\Dispatcher;
-	use Classes\Request\RequestInterface;
-	use Classes\Response\ResponseInterface;
+	use Classes\Request\Request;
+	use Classes\Response\Response;
 
 	class FrontController
 	{
@@ -26,7 +26,7 @@
 			$this->mDispatcher = $pDispatcher;
 		}
 
-		public function run( RequestInterface $pRequest, ResponseInterface $pResponse)
+		public function run( Request $pRequest, Response $pResponse)
 		{
 			$lRoute = $this->mRouter->route( $pRequest, $pResponse);
 			$this->mDispatcher->dispatch( $lRoute, $pRequest, $pResponse);

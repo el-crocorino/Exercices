@@ -7,14 +7,14 @@
 	 */
 
 	namespace Classes\Dispatcher;
-	use Classes\Route\RouteInterface;
-	use Classes\Request\RequestInterface;
-	use Classes\Response\ResponseInterface;
+	use Classes\Route\Route;
+	use Classes\Request\Request;
+	use Classes\Response\Response;
 
 
 	class Dispatcher
 	{
-		public function dispatch( RouteInterface $pRoute, RequestInterface $pRequest, ResponseInterface $pResponse)
+		public function dispatch( Route $pRoute, Request $pRequest, Response $pResponse)
 		{
 			$lController = $pRoute->createController();
 			$lController->execute( $pRequest, $pResponse);

@@ -15,12 +15,12 @@
 		protected $mVersion = '';
 		protected $mHeaders = [];
 
-		public function __construct( $pVersion )
+		public function __construct( $pVersion = '')
 		{
 			$this->mVersion = $pVersion;
 		}
 
-		public function getVersion(  ) : string
+		public function getVersion() : string
 		{
 			return $this->mVersion;
 		}
