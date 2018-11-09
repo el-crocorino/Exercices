@@ -8,9 +8,12 @@
 
 	namespace Classes\Request;
 
-
-	class Request
+	class Request implements RequestInterface
 	{
+
+		protected $mUri = '';
+		protected $mParams = [];
+
 		public function __construct( $pUri, $pParams)
 		{
 			$this->mUri = $pUri;
